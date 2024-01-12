@@ -1,5 +1,12 @@
 package com.gridnine.testing;
 
+import com.gridnine.testing.builder.FlightBuilder;
+import com.gridnine.testing.filter.ArrivalBeforeDepartureFilter;
+import com.gridnine.testing.filter.DepartureBeforeNowFilter;
+import com.gridnine.testing.filter.FlightFilter;
+import com.gridnine.testing.filter.LongTransfersFilter;
+import com.gridnine.testing.model.Flight;
+
 import java.util.List;
 
 public class Main {

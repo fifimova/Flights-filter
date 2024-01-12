@@ -1,5 +1,9 @@
 package com.gridnine.testing;
 
+import com.gridnine.testing.filter.FlightFilter;
+import com.gridnine.testing.filter.LongTransfersFilter;
+import com.gridnine.testing.model.Flight;
+import com.gridnine.testing.model.Segment;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
@@ -17,11 +21,11 @@ class LongTransfersFilterTest {
         LocalDateTime now = LocalDateTime.now();
         Segment shortTransferSegment1 = new Segment(now.minusHours(5), now.minusHours(4));
         Segment shortTransferSegment2 = new Segment(now.minusHours(3), now.minusHours(2));
-        Flight shortTransferFlight = new Flight(Arrays.asList(shortTransferSegment1, shortTransferSegment2));
+        Flight shortTransferFlight = new Flight("description", Arrays.asList(shortTransferSegment1, shortTransferSegment2));
 
         Segment longTransferSegment1 = new Segment(now.minusDays(1), now.minusDays(1).plusHours(2));
         Segment longTransferSegment2 = new Segment(now, now.plusHours(2));
-        Flight longTransferFlight = new Flight(Arrays.asList(longTransferSegment1, longTransferSegment2));
+        Flight longTransferFlight = new Flight("description", Arrays.asList(longTransferSegment1, longTransferSegment2));
 
         List<Flight> flights = Arrays.asList(shortTransferFlight, longTransferFlight);
 
