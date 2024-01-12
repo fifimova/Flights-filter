@@ -1,6 +1,5 @@
 package com.gridnine.testing.filter;
 
-import com.gridnine.testing.filter.FlightFilter;
 import com.gridnine.testing.model.Flight;
 
 import java.time.LocalDateTime;
